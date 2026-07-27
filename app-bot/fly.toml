@@ -1,0 +1,10 @@
+app = "app-bot"          # change this if you want another name
+primary_region = "iad"   # change to a region closer to you if you want
+
+[build]
+
+[env]
+  # You can also put variables here, but better to use secrets
+
+[[services]]
+  # We don't need any public ports for a Discord bot
