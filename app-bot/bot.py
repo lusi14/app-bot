@@ -1,8 +1,17 @@
+import config                                                                                          
+import os
 import discord
 from discord import app_commands
 from discord.ext import commands
-import config
 
+TOKEN = os.getenv("TOKEN")
+GUILD_ID = int(os.getenv("GUILD_ID"))
+LOG_CHANNEL_ID = int(os.getenv("LOG_CHANNEL_ID"))
+
+REQUIRED_ROLE_ID = os.getenv("REQUIRED_ROLE_ID")
+REQUIRED_ROLE_ID = int(REQUIRED_ROLE_ID) if REQUIRED_ROLE_ID else None
+
+# ... rest of the code stays the same
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
